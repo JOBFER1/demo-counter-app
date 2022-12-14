@@ -10,9 +10,7 @@ pipeline{
                 
                 script{
                     
-                    git branch: 'main', url: 'https://github.com/JOBFER1/demo-counter-app.git'
-                    //git branch: 'main', url: 'https://github.com/vikash-kumar01/mrdevops_javaapplication.git'
-                    
+                    git branch: 'main', url: 'https://github.com/vikash-kumar01/mrdevops_javaapplication.git'
                 }
             }
         }
@@ -56,11 +54,11 @@ pipeline{
                         
                         sh 'mvn clean package sonar:sonar'
                     }
-                }
+                   }
                     
+                }
             }
-        }
-        stage('Quality Gate Status'){
+            stage('Quality Gate Status'){
                 
                 steps{
                     
